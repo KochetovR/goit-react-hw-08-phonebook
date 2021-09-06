@@ -1,0 +1,22 @@
+.box {
+  width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.modal__button__open {
+  width: 150px;
+  border-radius: 4px;
+  border: 1px solid #9c9c9c;
+  background-color: transparent;
+}
+
+.modal__button__open:hover {
+  cursor: pointer;
+}
+
+.modal__button__open:active {
+  transform: scale(1.15);
+  background-color: blue;
+  color: #ffffff;
+}

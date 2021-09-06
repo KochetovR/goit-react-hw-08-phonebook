@@ -1,0 +1,45 @@
+.title {
+  width: 650px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.box {
+  display: block;
+  width: 600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.form {
+  width: 350px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.formText {
+  margin: 0;
+}
+
+.formInput {
+  margin: 5px 0 10px;
+}
+
+.formBtn {
+  display: block;
+  width: 100px;
+  height: 23px;
+  border-radius: 4px;
+  border: 1px solid #9c9c9c;
+  background-color: transparent;
+}
+
+.formBtn:hover {
+  cursor: pointer;
+}
+
+.formBtn:active {
+  transform: scale(1.15);
+  background-color: rgb(52, 64, 228);
+  color: #ffffff;
+}

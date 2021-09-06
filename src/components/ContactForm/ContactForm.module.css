@@ -1,0 +1,56 @@
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  width: 570px;
+  height: 230px;
+  margin-bottom: 10px;
+  padding: 15px;
+  border: 2px solid #000000;
+}
+
+.contact__label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.contact__input {
+  width: 200px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #9c9c9c;
+}
+
+.contact__button {
+  width: 100px;
+  border-radius: 4px;
+  border: 1px solid #9c9c9c;
+  background-color: transparent;
+}
+
+.contact__button:hover {
+  cursor: pointer;
+}
+
+.contact__button:active {
+  transform: scale(1.15);
+  background-color: green;
+  color: #ffffff;
+}
+
+.modal__button__close {
+  width: 100px;
+  border-radius: 4px;
+  border: 1px solid #9c9c9c;
+  background-color: transparent;
+}
+
+.modal__button__close:hover {
+  cursor: pointer;
+}
+
+.modal__button__close:active {
+  transform: scale(1.15);
+  background-color: red;
+  color: #ffffff;
+}

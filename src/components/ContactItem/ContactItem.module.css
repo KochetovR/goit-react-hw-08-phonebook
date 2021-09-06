@@ -1,0 +1,28 @@
+.contact__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.contact__item p {
+  margin: 0;
+}
+
+.contact__button {
+  width: 100px;
+  height: 23px;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #9c9c9c;
+  background-color: transparent;
+}
+
+.contact__button:hover {
+  cursor: pointer;
+}
+
+.contact__button:active {
+  transform: scale(1.15);
+  background-color: red;
+  color: #ffffff;
+}

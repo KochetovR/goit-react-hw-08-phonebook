@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 10px;
+}
+
+.item {
+  text-decoration: none;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.item:hover {
+  color: blue;
+}
+
+.item:first-child {
+  margin-right: 10px;
+}
+
+.activeLink {
+  color: red;
+}
