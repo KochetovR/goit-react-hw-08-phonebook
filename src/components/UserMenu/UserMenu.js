@@ -12,18 +12,27 @@ export default function UserMenu() {
   const avatar = defaultAvatar;
 
   return (
-    <div className={styles.userBox}>
-      <img src={avatar} alt="user" width="30" className={styles.userAvatar} />
-      <span className={styles.userGreeting}>
-        Welcome, <span className={styles.userEmail}>{email}</span>
-      </span>
-      <button
-        className={styles.btnLogout}
-        type="button"
-        onClick={() => dispatch(authOperations.logOut())}
-      >
-        LogOut
-      </button>
-    </div>
+    <>
+      {email !== null && (
+        <div className={styles.userBox}>
+          <img
+            src={avatar}
+            alt="user"
+            width="30"
+            className={styles.userAvatar}
+          />
+          <span className={styles.userGreeting}>
+            Welcome, <span className={styles.userEmail}>{email}</span>
+          </span>
+          <button
+            className={styles.btnLogout}
+            type="button"
+            onClick={() => dispatch(authOperations.logOut())}
+          >
+            LogOut
+          </button>
+        </div>
+      )}
+    </>
   );
 }
