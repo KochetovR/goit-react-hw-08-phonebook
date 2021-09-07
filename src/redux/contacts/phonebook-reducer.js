@@ -5,12 +5,6 @@ import * as phonebookActions from './phonebook-actions';
 const contacts = createReducer([], {
   [phonebookActions.fetchContactsSuccess]: (_, action) => action.payload,
   [phonebookActions.addContactSuccess]: (state, { payload }) => {
-    const nameContact = state.map(el => el.name.toLowerCase());
-
-    if (nameContact.includes(payload.name.toLowerCase())) {
-      alert(`${payload.name} is already in contacts`);
-      return;
-    }
     return [...state, payload];
   },
 

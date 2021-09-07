@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { connect } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import contactsOperations from '../../redux/contacts/contactsOperations';
+import { getFilterContacts } from '../../redux/contacts/phonebook-selectors';
 
 import styles from './ContactForm.module.css';
 
 const ContactFrom = ({ onSubmit, onClose }) => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
+
+  const contacts = useSelector(getFilterContacts);
 
   const handleInputChange = e => {
     const { name, value } = e.target;
@@ -27,6 +30,12 @@ const ContactFrom = ({ onSubmit, onClose }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const nameContact = contacts.map(el => el.name.toLowerCase());
+
+    if (nameContact.includes(name.toLowerCase())) {
+      alert(`${name} is already in contacts`);
+      return;
+    }
     onSubmit({ name: name, number: number });
 
     reset();

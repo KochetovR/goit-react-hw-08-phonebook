@@ -1,12 +1,15 @@
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import contactsOperations from '../../redux/contacts/contactsOperations';
+import { getFilterContacts } from '../../redux/contacts/phonebook-selectors';
 
 import styles from './EditForm.module.css';
 
 const ContactFrom = ({ onClose, data }) => {
   const [name, setName] = useState(data.name);
   const [number, setNumber] = useState(data.number);
+
+  const contacts = useSelector(getFilterContacts);
 
   const dispatch = useDispatch();
   const idContact = data.id;
@@ -30,6 +33,13 @@ const ContactFrom = ({ onClose, data }) => {
 
   const handleSubmit = e => {
     e.preventDefault();
+    const nameContact = contacts.map(el => el.name.toLowerCase());
+
+    if (nameContact.includes(name.toLowerCase())) {
+      alert(`${name} is already in contacts`);
+      return;
+    }
+
     dispatch(contactsOperations.editContact(idContact, { name, number }));
     reset();
   };
